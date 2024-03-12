@@ -6,3 +6,5 @@
 3. Image forensics online : [Aperi Solve](https://www.aperisolve.com/)
 
 4. This tool is designed to solve a wide variety of codes and ciphers. [Multi Decoder](https://www.cachesleuth.com/multidecoder/)
+
+5.Zip cracking: zip2john - A component of johntheripper for zip files.
