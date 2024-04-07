@@ -13,4 +13,4 @@
 
 7.Web scraping: https://scrapy.org/
 
-8.Volatility cheatsheet 2 vs 3: https://blog.onfvp.com/post/volatility-cheatsheet/
+8.Volatility cheatsheet 2 vs 3: https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet
