@@ -12,3 +12,5 @@
 6.OSINT search: https://whatsmyname.app/ - Maybe help you find some link others cannot
 
 7.Web scraping: https://scrapy.org/
+
+8.Volatility cheatsheet 2 vs 3: https://blog.onfvp.com/post/volatility-cheatsheet/
