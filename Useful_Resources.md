@@ -14,4 +14,5 @@
 7.Web scraping: https://scrapy.org/
 
 8.Volatility cheatsheet 2 vs 3: https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet
+
 9: Unsalted hash lookup table online: https://crackstation.net/
