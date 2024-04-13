@@ -17,4 +17,24 @@
 
 9: Unsalted hash lookup table online: https://crackstation.net/
 
-10.https://curlconverter.com/ Convet curl commands to code
+10.Web challenges basic steps:
+  If blind (No src given):
+  ctrl + U -> scripts.js (Go through source)
+  Crack jwt token
+  sqli:if internal 500 error => yes. Try '  " ' or 1=1-- -
+  Look into Devtools,Headers,Cookies,Localstorage => copy requests => https://curlconverter.com/ => python script fuzz endpoints
+  Gobuster : Basically a directory brute-forcer. Change user-agent to prevent detection by CTForganisers
+  If {{ 7 * 7 }} => 49 then try SSTI jinja2.
+  ; ls => lists file or bash error => RCE possible
+  xss <h1>hi</h1>
+  dom clobber
+
+If source given:
+open link see
+Find type of database. Search for strings like sqlite etc. Search for ? to check which sql queries are vulnerable.
+Search for innerHTML
+render() OR views folder => SSTI (Server side template injection)
+If subprocess imported =>  RCE
+
+
+
