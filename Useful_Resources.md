@@ -18,6 +18,7 @@
 9: Unsalted hash lookup table online: https://crackstation.net/
 
 10.Web challenges basic steps:
+  
   If blind (No src given):
   
   ctrl + U -> scripts.js (Go through source)
