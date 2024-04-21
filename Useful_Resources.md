@@ -17,7 +17,9 @@
 
 9: Unsalted hash lookup table online: https://crackstation.net/
 
-10.Web challenges basic steps:
+10. CSP bypass callbac: https://github.com/zigoo0/JSONBee
+
+11.Web challenges basic steps:
   
   If blind (No src given):
   
