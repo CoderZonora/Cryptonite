@@ -1,6 +1,5 @@
 1. Lots of tools in one place for variety of domains : [CyberChef](https://gchq.github.io/CyberChef/)
 
-
 2. OCR for math equations: https://github.com/lukas-blecher/LaTeX-OCR
 
 3. Image forensics online : [Aperi Solve](https://www.aperisolve.com/)
@@ -19,7 +18,9 @@
 
 10. CSP bypass callback api's: https://github.com/zigoo0/JSONBee
 
-11.Web challenges basic steps:
+11. Payloads for all kinds of different things:
+  https://github.com/swisskyrepo/PayloadsAllTheThings
+12.Web challenges basic steps:
   
   If blind (No src given):
   
@@ -51,6 +52,3 @@ Search for innerHTML
 render() OR views folder => SSTI (Server side template injection)
 
 If subprocess imported =>  RCE
-
-
-
