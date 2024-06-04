@@ -20,7 +20,10 @@
 
 11. Payloads for all kinds of different things:
   https://github.com/swisskyrepo/PayloadsAllTheThings
-12.Web challenges basic steps:
+
+12) https://unicodelookup.com/ - To bypass filters 
+
+13.Web challenges basic steps:
   
   If blind (No src given):
   
@@ -52,3 +55,5 @@ Search for innerHTML
 render() OR views folder => SSTI (Server side template injection)
 
 If subprocess imported =>  RCE
+
+
