@@ -14,7 +14,8 @@
 
 8.Volatility cheatsheet 2 vs 3: https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet
 
-9: Unsalted hash lookup table online: https://crackstation.net/
+9: Unsalted hash lookup table online: https://crackstation.net/  
+  https://md5.gromweb.com/?md5=8d763385e0476ae208f21bc63956f748 - Works for md5,sha1 etc directly from browser request. Might be better if you have a list
 
 10. CSP bypass callback api's: https://github.com/zigoo0/JSONBee
 
