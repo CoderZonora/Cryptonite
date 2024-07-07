@@ -46,8 +46,9 @@
   
   dom clobber
 
-If source given:
-Go thorugh source.
+If source given:  
+    Go thorugh source.
+    If you see some special code which you think might be copied from somewhere just try to paste the code on browser and check. Don't just GPT it!!!! - Ref: Downunderctf prototype pollution
 
 Find type of database. Search for strings like sqlite etc. Search for ? to check which sql queries are vulnerable.
 
@@ -56,5 +57,7 @@ Search for innerHTML
 render() OR views folder => SSTI (Server side template injection)
 
 If subprocess imported =>  RCE
+
+
 
 
