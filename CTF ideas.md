@@ -4,3 +4,11 @@
 
 - You can have custom styled messages loaded into the devtools console ,like facebook uses to give warning about self-XSS. 
 https://stackoverflow.com/questions/42165204/how-can-i-display-a-warning-to-users-who-open-the-chrome-console-like-facebook
+
+- ftp server thing : https://blog.s1r1us.ninja/CTF/tangled_browsers
+
+- redos attack: https://blog.huli.tw/2023/06/12/en/redos-regular-expression-denial-of-service/
+
+- Prototype pollution in Javascript or python class pollution
+	https://www.coursera.org/learn/javascript-security-part-2/lecture/wMlwD/prototype-pollution-exploit
+	time: after 13:50. You can use prototype pollution to run other scripts in your source.
