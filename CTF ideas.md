@@ -12,3 +12,7 @@ https://stackoverflow.com/questions/42165204/how-can-i-display-a-warning-to-user
 - Prototype pollution in Javascript or python class pollution
 	https://www.coursera.org/learn/javascript-security-part-2/lecture/wMlwD/prototype-pollution-exploit
 	time: after 13:50. You can use prototype pollution to run other scripts in your source.
+	
+- You can use ANSI escape sequences to do cool things with the terminal and hide stuff. 
+Eg: https://github.com/swag-wafu/mitre-2019/blob/master/Nyan.md 
+	https://www.youtube.com/watch?v=JUOx3puwniE

@@ -38,3 +38,25 @@ Prototype pollution:
 Background on objects and classes etc:
 	If you assign a property as undefined it does not delete it!. It sets the value to undefined but its still listed under the object.
 	So if you call it like `ob.x; => undefined` which is also the output if you call properties not under the object. 
+	
+
+What is package-lock? A package.json file but with hash of the dependencies as well so that Supply chain or MITM will be prevented.
+	
+Summary of imp. points:
+
+Serverless javascript may not be directly vulnerable to DoS but may be vulnerable to Money Dos malicious payloads may spike up running time and bills to a lot.
+Always use CI/CD and deploy scripts. Don't store secrets hardcoded, either .env or manually put. 	
+Don't console.log everything as it might have private info, just log enough things so that you can trace errors and find out how to fix them.
+Use shell commands inside <b>Child.spawn</b> and not exec or others.
+Use PHP and not serverless if you want one thread per process.
+
+Use <b>SYNK</b> to check for vulnerable packages along with npm sudit as they have a large database.
+Run untrusted code in a Docker container first to check it. Use firewalls to prevent your local 
+application being accessible to other people on the same network like in an office.
+Dont use public networks when devloping or running application 
+
+Don't deploy dev dependencies into production.
+specify the kind of dependency in the package.json like devdependency,bundle dependencies,optional dependencies etc. 
+For exact details see [here](https://docs.npmjs.com/cli/v10/configuring-npm/package-json#dependencies)
+Use https://npm.anvaka.com or https://www.npmjs.com/package/@nodesecure/cli to find details(visually) about dependencies you want to use to 
+make an informed decision about if it is good for your use case.
