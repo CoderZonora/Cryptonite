@@ -16,3 +16,8 @@ https://stackoverflow.com/questions/42165204/how-can-i-display-a-warning-to-user
 - You can use ANSI escape sequences to do cool things with the terminal and hide stuff. 
 Eg: https://github.com/swag-wafu/mitre-2019/blob/master/Nyan.md 
 	https://www.youtube.com/watch?v=JUOx3puwniE
+	
+	
+- https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github Can be a misc challenge regarding getting a flag from deleted repo.
+
+- SSTI to read file which links to github pull request about JSON sql in sqlmap which gives idea about JSON based sqli attack which they then havr to perform on the database.
