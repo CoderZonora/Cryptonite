@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+    .post {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 10px #ccc;
+    }
+    .hidden {
+      display: none;
+    }
+    h2 {
+      color: #333;
+      text-align: center;
+      padding: 10px 0;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    input[type="submit"] {
+      padding: 10px 15px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Blog Post Form</h2>
+
+<form action="/createPost" method="post">
+  <label for="title">Title:</label><br>
+  <input type="text" id="title" name="title"><br>
+  <label for="content">Content:</label><br>
+  <textarea id="content" name="content"></textarea><br>
+  <input type="submit" value="Submit">
+</form>
+
+ 
+
+
+<h2>Blog Posts</h2>
+
+{% for post in posts %}
+  <div class="post">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.content }}</p>
+  </div>
+{% endfor %}
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

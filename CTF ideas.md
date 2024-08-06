@@ -21,3 +21,6 @@ Eg: https://github.com/swag-wafu/mitre-2019/blob/master/Nyan.md
 - https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github Can be a misc challenge regarding getting a flag from deleted repo.
 
 - SSTI to read file which links to github pull request about JSON sql in sqlmap which gives idea about JSON based sqli attack which they then havr to perform on the database.
+
+
+- https://github.com/ticarpi/jwt_tool/tree/master

@@ -38,7 +38,7 @@
 
   Gobuster : Basically a directory brute-forcer. Change user-agent to prevent detection by CTForganisers
   
-  If {{ 7 * 7 }} => 49 then try SSTI jinja2.
+  If {{ 7 * 7 }} => 49 then try SSTI jinja2. or `#{5*5}` also in some software.
 
   ; ls => lists file or bash error => RCE possible
   

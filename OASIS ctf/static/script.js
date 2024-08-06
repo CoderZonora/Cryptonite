@@ -1,0 +1,12 @@
+  var form = document.createElement('form');
+  form.action = '/revealMessage';
+  form.method = 'post';
+  var input = document.createElement('input');
+  input.type = 'text';
+  input.name = 'secret';
+  var submit = document.createElement('input');
+  submit.type = 'submit';
+  submit.value = 'Submit';
+  form.appendChild(input);
+  form.appendChild(submit);
+  document.getElementById('notAForm').appendChild(form);
