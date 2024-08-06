@@ -19,12 +19,12 @@ def home():
     token = request.cookies.get('user_token')
     if not token:
         token = str(uuid.uuid4())
-        user_progress[token] = {"PATCH": False, "PUT": False, "TRACE": False}
+        user_progress[token] = {"PATCH": False, "PUT": False, "OPTIONS": False}
         response = make_response(render_template('index.html', posts=blog_posts))
         response.set_cookie('user_token', token)
         return response
     elif token not in user_progress:
-        user_progress[token] = {"PATCH": False, "PUT": False, "TRACE": False}
+        user_progress[token] = {"PATCH": False, "PUT": False, "OPTIONS": False}
     
     return render_template('index.html', posts=blog_posts)
 @app.route('/createPost', methods=['POST'])
@@ -55,7 +55,7 @@ def reveal_message():
 def static_from_root():
     return send_from_directory('./static', 'robots.txt')
 
-@app.route('/hiddenFlag', methods=['POST','PATCH', 'PUT', 'TRACE'])
+@app.route('/hiddenFlag', methods=['POST','PATCH', 'PUT', 'OPTIONS'])
 def hidden_flag():
     token = request.cookies.get('user_token')
     if not token or token not in user_progress:
@@ -69,8 +69,8 @@ def hidden_flag():
     elif request.method == 'PATCH' and not user_progress[token]["PATCH"]:
         user_progress[token]["PATCH"] = True
         return 'Right ahead!'
-    elif request.method == 'TRACE' and not user_progress[token]["TRACE"]:
-        user_progress[token]["TRACE"] = True
+    elif request.method == 'OPTIONS' and not user_progress[token]["OPTIONS"]:
+        user_progress[token]["OPTIONS"] = True
         return 'Right ahead!'
 
     if all(user_progress[token].values()):
