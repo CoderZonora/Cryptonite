@@ -9,4 +9,4 @@
   submit.value = 'Submit';
   form.appendChild(input);
   form.appendChild(submit);
-  document.getElementById('notAForm').appendChild(form);
+  document.getElementById('formContainer').appendChild(form);
