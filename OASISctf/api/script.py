@@ -4,12 +4,12 @@ import uuid
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'  # Needed for session management
 
-# Let's assume this is your database of blog posts
-blog_posts = [
-    {"title": "First Post", "content": "This is the first post."},
-    {"title": "Second Post", "content": "This is the second post."},
-    # Add more posts as needed...
-]
+# # Let's assume this is your database of blog posts
+# blog_posts = [
+#     {"title": "First Post", "content": "This is the first post."},
+#     {"title": "Second Post", "content": "This is the second post."},
+#     # Add more posts as needed...
+# ]
 
 # Dictionary to track progress for each user
 user_progress = {}
@@ -19,25 +19,50 @@ def home():
     token = request.cookies.get('user_token')
     if not token:
         token = str(uuid.uuid4())
-        user_progress[token] = {"PATCH": False, "PUT": False, "OPTIONS": False}
-        response = make_response(render_template('index.html', posts=blog_posts))
+        user_progress[token] = {
+            "PATCH": False,
+            "PUT": False,
+            "TRACE": False,
+            "blog_posts": [
+                {"title": "First Post", "content": "This is the first post."},
+                {"title": "Second Post", "content": "This is the second post."},
+                # Add more posts as needed...
+            ]
+        }
+        response = make_response(render_template('index.html', posts=user_progress[token]["blog_posts"]))
         response.set_cookie('user_token', token)
         return response
     elif token not in user_progress:
-        user_progress[token] = {"PATCH": False, "PUT": False, "OPTIONS": False}
+        user_progress[token] = {
+            "PATCH": False,
+            "PUT": False,
+            "TRACE": False,
+            "blog_posts": [
+                {"title": "First Post", "content": "This is the first post."},
+                {"title": "Second Post", "content": "This is the second post."},
+                # Add more posts as needed...
+            ]
+        }
     
-    return render_template('index.html', posts=blog_posts)
+    return render_template('index.html', posts=user_progress[token]["blog_posts"])
+
 @app.route('/createPost', methods=['POST'])
 def create_post():
+    token = request.cookies.get('user_token')
+    if not token or token not in user_progress:
+        return 'Invalid token', 400
+
     title = request.form.get('title')
     content = request.form.get('content')
-    if(title == "" and content == ""):
+    user_blog_posts = user_progress[token]["blog_posts"]
+
+    if title == "" and content == "":
         return jsonify('You shouldn\'t do that')
-    elif(len(blog_posts) > 25):
+    elif len(user_blog_posts) > 25:
         return jsonify('Nice Try! But there\'s a limit')
     else:
-        blog_posts.append({"title": title, "content": content})
-        return render_template('index.html', posts=blog_posts)
+        user_blog_posts.append({"title": title, "content": content})
+        return render_template('index.html', posts=user_blog_posts)
 
 @app.route('/revealMessage', methods=['POST'])
 def reveal_message():
@@ -55,7 +80,7 @@ def reveal_message():
 def static_from_root():
     return send_from_directory('./static', 'robots.txt')
 
-@app.route('/hiddenFlag', methods=['POST','PATCH', 'PUT', 'OPTIONS'])
+@app.route('/hiddenFlag', methods=['POST','PATCH', 'PUT', 'TRACE'])
 def hidden_flag():
     token = request.cookies.get('user_token')
     if not token or token not in user_progress:
@@ -69,8 +94,8 @@ def hidden_flag():
     elif request.method == 'PATCH' and not user_progress[token]["PATCH"]:
         user_progress[token]["PATCH"] = True
         return 'Right ahead!'
-    elif request.method == 'OPTIONS' and not user_progress[token]["OPTIONS"]:
-        user_progress[token]["OPTIONS"] = True
+    elif request.method == 'TRACE' and not user_progress[token]["TRACE"]:
+        user_progress[token]["TRACE"] = True
         return 'Right ahead!'
 
     if all(user_progress[token].values()):
