@@ -2,14 +2,7 @@ from flask import Flask, request, render_template, jsonify, send_from_directory,
 import uuid
 
 app = Flask(__name__)
-app.secret_key = 'supersecretkey'  # Needed for session management
-
-# # Let's assume this is your database of blog posts
-# blog_posts = [
-#     {"title": "First Post", "content": "This is the first post."},
-#     {"title": "Second Post", "content": "This is the second post."},
-#     # Add more posts as needed...
-# ]
+app.secret_key = 'supersecretkeyasdfghjkl1234'  # Needed for session management
 
 # Dictionary to track progress for each user
 user_progress = {}
