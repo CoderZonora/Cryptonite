@@ -57,7 +57,7 @@ def create_post():
         user_blog_posts.append({"title": title, "content": content})
         return render_template('index.html', posts=user_blog_posts)
 
-@app.route('/revealMessage', methods=['POST'])
+""" @app.route('/revealMessage', methods=['POST'])
 def reveal_message():
     secret = request.form.get('secret')
     if not secret or secret == 'secret code':
@@ -68,7 +68,7 @@ def reveal_message():
         return jsonify(hints), 200
     else:
         return 'Try again!', 400
-
+ """
 @app.route('/robots.txt')
 def static_from_root():
     return send_from_directory('./static', 'robots.txt')
@@ -83,16 +83,16 @@ def hidden_flag():
         return 'It\'s not going to be so easy! Delve deeper!'
     elif request.method == 'PUT' and not user_progress[token]["PUT"]:
         user_progress[token]["PUT"] = True
-        return 'Right ahead!'
+        return 'Right ahead! This method is used to update a resource on the server'
     elif request.method == 'PATCH' and not user_progress[token]["PATCH"]:
         user_progress[token]["PATCH"] = True
-        return 'Right ahead!'
+        return 'Right ahead! This method is used to partially update a resource on the server'
     elif request.method == 'OPTIONS' and not user_progress[token]["OPTIONS"]:
         user_progress[token]["OPTIONS"] = True
-        return 'Right ahead!'
+        return 'Right ahead! This method is used to find out what methods are available on the server'
 
     if all(user_progress[token].values()):
-        return 'OASIS{congratulations_you_found_the_hidden_flag}'
+        return 'OASIS{r0b0t5_4nd_m37h0d5_4r3_pr3tty_c00l!}'
     else:
         return f'You\'re on the right path, keep going'
 
