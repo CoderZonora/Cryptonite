@@ -9,6 +9,7 @@
 5.Zip cracking: zip2john - A component of johntheripper for zip files.   https://superuser.com/a/1737639
 
 6.OSINT search: https://whatsmyname.app/ - Maybe help you find some link others cannot
+		https://geomastr.com/ , https://geospy.ai/ , https://overpass-turbo.eu/
 
 7.Web scraping: https://scrapy.org/
 

@@ -17,8 +17,8 @@ def home():
             "PUT": False,
             "OPTIONS": False,
             "blog_posts": [
-                {"title": "First Post", "content": "This is the first post."},
-                {"title": "Second Post", "content": "This is the second post."},
+                {"title": "OASIS hacked?", "content": "Guys what is happening to OASIS?"},
+                {"title": "I did it!", "content": "I am doing this. Send me Bitcoin requests and I will give you the Patch for OASIS"},
                 # Add more posts as needed...
             ]
         }
@@ -31,8 +31,8 @@ def home():
             "PUT": False,
             "OPTIONS": False,
             "blog_posts": [
-                {"title": "First Post", "content": "This is the first post."},
-                {"title": "Second Post", "content": "This is the second post."},
+                {"title": "OASIS hacked?", "content": "Guys what is happening to OASIS?"},
+                {"title": "I did it!", "content": "I am doing this. Send me Bitcoin requests and I will give you the Patch for OASIS"},
                 # Add more posts as needed...
             ]
         }
