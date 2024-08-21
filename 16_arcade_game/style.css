@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css?family=Pixelify+Sans');
+
+/* Make text bold */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    color: #fff;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.arcade-screen {
+    border: 5px solid #000000;
+    padding: 90%;
+    text-align: center;
+/*     animation: flicker 0.1s infinite;
+    animation-delay: calc(random() * 0.1s);
+    animation-duration: calc(random() * 0.1s + 0.1s); */
+
+  }
+  
+/*   @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+ */
+
+button {
+    background-color: #1e9af200;
+    color: #fff;
+    border: none;
+    padding: 20px 40px; /* Increase padding for a bigger button */
+    font-size: 70px; /* Increase font size for a bigger button */
+    cursor: pointer;
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Ensure the button is treated as a block element */
+    white-space: nowrap; /* Prevent text wrapping */
+    width: fit-content; /* Adjust width to fit content */
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+button:hover {
+    background-color: #1e9af200;
+}
+
+.hidden {
+    display: none;
+}
