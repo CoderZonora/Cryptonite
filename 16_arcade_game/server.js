@@ -3,11 +3,11 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-app.use(express.static(path.resolve(__dirname, '../public')));
+app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../public/index.html'));
+    res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 app.post('/givemetheFlag', (req, res) => {
