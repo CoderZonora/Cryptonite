@@ -27,7 +27,7 @@ app.post('/game', (req, res) => {
     if (req.headers['user-agent'] !== 'OASISPlayer') {
         return res.json({ errorMessage: "You need to be OASISPlayer to start the game" });
     }
-    if (req.headers['x-forwarded-for'] !== '127.0.0.1') {
+    if (req.headers['x-tes-custom'] !== '127.0.0.1') {
         return res.json({ errorMessage: "Riddle me this, why are you originating from outside?" });
     }
     return res.json({ errorMessage: "Oh you're local! Then give me the name and 2023 CTF ranking of MIT's premier cybersecurity project on /givemetheFlag" });
