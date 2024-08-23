@@ -1,8 +1,14 @@
 document.getElementById('startButton').addEventListener('click', function() {
+    fetch('/game', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ errorMessage: 'Give me a message' }),
+  })
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('errorMessage').innerHTML = data.errorMessage;
+    });
     document.getElementById('errorMessage').classList.remove('hidden');
-    setTimeout(function() {
-        location.reload();
-    }, (1.5 * 1000));
 });
 
 const arcadeScreen = document.querySelector('.arcade-screen');
