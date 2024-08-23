@@ -3,21 +3,23 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-app.use(express.static(path.resolve(__dirname, '')));
-app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(express.static(path.resolve(__dirname, '../public')));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../public/index.html'));
 });
 
 app.post('/givemetheFlag', (req, res) => {
-    
-    const bodyString = JSON.stringify(req.body).toLowerCase();
-    if (bodyString.includes("cryptonite") && bodyString.includes("5")){
-        return res.json({ errorMessage: 'Well Done Player! Here\'s your prize: OASIS{G37_d035_n07_4lw4y5_G37_th1ng5} for knowing about them' });
-    } else {
-        return res.json({ errorMessage: 'Answer not found' });
+    try {
+        const bodyString = JSON.stringify(req.body).toLowerCase();
+        if (bodyString.includes("cryptonite") && bodyString.includes("5")) {
+            return res.json({ errorMessage: 'Well Done Player! Here\'s your prize: OASIS{G37_d035_n07_4lw4y5_G37_th1ng5} for knowing about them' });
+        } else {
+            return res.json({ errorMessage: 'Answer not found' });
+        }
+    } catch (error) {
+        return res.json({ errorMessage: 'Invalid format' });
     }
 });
 
