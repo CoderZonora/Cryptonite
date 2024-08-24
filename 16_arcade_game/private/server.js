@@ -23,14 +23,17 @@ app.post('/givemetheFlag', (req, res) => {
     }
 });
 
+
+// query parameters or require cookie
+
 app.post('/game', (req, res) => {
     if (req.headers['user-agent'] !== 'OASISPlayer') {
         return res.json({ errorMessage: "You need to be OASISPlayer to start the game" });
     }
-    if (req.headers['x-tes-custom'] !== '127.0.0.1') {
-        return res.json({ errorMessage: "Riddle me this, why are you originating from outside?" });
+    if (!req.query.name) {
+        return res.json({ errorMessage: "Don't you have your own name? Please provide your name parameter." });
     }
-    return res.json({ errorMessage: "Oh you're local! Then give me the name and 2023 CTF ranking of MIT's premier cybersecurity project on /givemetheFlag" });
+    return res.json({ errorMessage: "Oh hello! Can you give me the name and 2023 CTF ranking of MIT's premier cybersecurity project on /givemetheFlag" });
 });
 
 app.listen(port, () => {
