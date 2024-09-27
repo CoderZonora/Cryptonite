@@ -20,7 +20,18 @@ Eg: https://github.com/swag-wafu/mitre-2019/blob/master/Nyan.md
 	
 - https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github Can be a misc challenge regarding getting a flag from deleted repo.
 
-- SSTI to read file which links to github pull request about JSON sql in sqlmap which gives idea about JSON based sqli attack which they then havr to perform on the database.
+- SSTI to read file which links to github pull request about JSON sql in sqlmap which gives idea about JSON based sqli attack which they then have to perform on the database.
 
 
 - https://github.com/ticarpi/jwt_tool/tree/master
+
+//CAN BE MADE INTO A GOOD CHAL IDEA 
+https://www.secforce.com/blog/new-technique-of-stealing-data-using-css-and-scroll-to-text-fragment-feature/
+
+https://news.sophos.com/en-us/2023/07/04/ghostscript-bug-could-allow-rogue-documents-to-run-system-commands/ // Maybe????
+
+
+https://labs.watchtowr.com/we-spent-20-to-achieve-rce-and-accidentally-became-the-admins-of-mobi/
+
+
+https://crzphil.github.io/posts/sshniff/
