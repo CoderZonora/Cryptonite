@@ -35,7 +35,7 @@
 
   sqli:if internal 500 error => yes. Try '  " ' or 1=1-- -
   
-  Look into Devtools,Headers,Cookies,Localstorage => copy requests => https://curlconverter.com/ => python script fuzz endpoints
+  Look into Devtools,Headers,Cookies,Localstorage => copy requests => https://curlconverter.com/ => python script fuzz common endpoints like robots.txt,sitemap.xml.
 
   Gobuster : Basically a directory brute-forcer. Change user-agent to prevent detection by CTForganisers
   
