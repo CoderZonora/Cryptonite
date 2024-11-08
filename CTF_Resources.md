@@ -50,3 +50,7 @@
    - Search for `innerHTML`
    - `render()` OR `views` folder => SSTI (Server-side template injection)
    - If `subprocess` imported => RCE
+
+14. **Git commands**
+15. - Clone the repo locally.
+    - Run `git ls-remote`-  List branches of a repo even if hidden.
