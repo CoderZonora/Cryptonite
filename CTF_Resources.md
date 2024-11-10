@@ -34,7 +34,7 @@
 
    **If blind (No src given):**
    - `ctrl + U` -> scripts.js (Go through source)
-   - Crack JWT token
+   - Crack JWT token. If nothing works Try setting jwt cookie with [user:admin](https://jwt.io/#debugger-io?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4ifQ.6SCnDxVXeEPANvmcwREQaN2Xbt7FKnFMz-W7AKXXcL8)
    - SQLi: if internal 500 error => yes. Try `'`, `"`, or `1=1-- -`
    - Look into Devtools, Headers, Cookies, LocalStorage -> copy requests -> [Curlconverter](https://curlconverter.com/) -> python script to fuzz common endpoints like `robots.txt`, `sitemap.xml`.
    - Gobuster: Basically a directory brute-forcer. Change user-agent to prevent detection by CTF organisers.
